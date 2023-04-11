@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanshiq home page</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
     <style>
         *{
             padding: 0;
@@ -51,16 +52,36 @@
         }
 
         
-        #navbar>div:nth-child(2){
+        #nb2{
             height: 80px;
             width:45%;
-            border:1px solid red;
+            /* border:1px solid red; */
+            display: flex;
+            align-items: center;
             
         }
-        #navbar>div:nth-child(3){
+        #nb2>div{
+            width:90%;
+            height:40px ;
+            border: 1px solid black;
+            margin-left: 15px;
+    
+        }
+        #nb2>div>input{
+            width:90%;
+            height:40px;
+            
+            
+        }
+
+
+        #nb3{
             height: 80px;
             width:34%;
             border:1px solid red;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 15px;
         }
 
     </style>
@@ -77,9 +98,26 @@
                 <div>
                     <input type="search" placeholder="Search for Gold Jewellery,Diamond Jewellery and more.."/>
                 </div>
-                <div></div>
+                <!-- <div></div> -->
             </div>
-            <div></div>
+            <div id="nb3">
+                <div>
+                    <i class="fa-solid fa-store"></i>
+                    <P>STORES</P>
+                </div>
+                <div>
+                    <i class="fa-regular fa-user"></i>
+                    <P>ACCOUNT</P>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart"></i>
+                    <P>WISHLIST</P>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <P>CART</P>
+                </div>
+            </div>
 
             
 
