@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultipleProduct</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #screen{
+            height: 4000px;
+            width: 100%;
+            border:4px solid orange;
+        }
+
+        #navbar{
+            height: 90px;
+            width: 100%;
+            /* border:4px solid green; */
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(242,233,233);
+            position: fixed;
+            top:0;
+        }
+
+        #nb{
+            height: 80px;
+            width:16%;
+            /* border:1px solid red; */
+            margin-left: 45px;
+            
+        }
+
+        #nb>div{
+            height: 70px;
+            width:73%;
+            /* border:1px solid yellow; */
+            padding-left: 45px;
+            /* background-color: rgb(242,233,233); */
+
+        }
+        #nb>div>img{
+            margin-top: 5px;
+            height: 100%;
+            width:100%;
+            /* border:1px solid red; */
+            background-color: rgb(242,233,233);
+
+
+        }
+
+        
+        #nb2{
+            height: 80px;
+            width:60%;
+            /* border:1px solid red; */
+            display: flex;
+            align-items: center;
+        
+            
+        }
+        #nb2>div{
+            width:90%;
+            height:40px ;
+            /* border: 1px solid black; */
+            margin-left: 15px;
+    
+        }
+        #nb2>div>input{
+            width:90%;
+            height:40px;
+            
+            
+        }
+
+
+        #nb3{
+            height: 80px;
+            width:34%;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: space-between;
+            margin-right: 95px;
+            align-items: center;
+            
+        }
+        #nb3>div>p{
+            font-size:12px;
+            color: rgb(138,79,78);
+            font-weight: normal;
+            margin-top: 5px;
+            
+        }
+        #nb3>div>i{
+            font-size:22px;
+            color: rgb(138,79,78);
+            
+            
+        }
+
+        #navbar2{
+            width:100%;
+            height:50px;
+            border:1px solid black;
+            /* padding-left: 85px; */
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #navbar2>div{
+            width:87%;
+            height: 100%;
+           justify-content: space-between; 
+           align-items: center;
+           display: flex;
+        
+           /* border:2px solid green; */
+        }
+        #navbar2>div>p{
+            font-size: 14px;
+        }
+
+
+
+        #navbar3{
+            width:100%;
+            height:50px;
+            border:1px solid red;
+            /* padding-left: 85px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 2px 12px gainsboro;
+        }
+        #navbar3>div{
+            width:87%;
+            height: 100%;
+           justify-content: space-between; 
+           align-items: center;
+           display: flex;
+           /* border:2px solid rgb(36, 226, 36); */
+        }
+        #navbar3>div>p{
+            font-size: 12px;
+            color: brown;
+        
+        }
+        #navbar3>div>p>span{
+            margin-left: 5px;
+        
+        }
+
+
+
+        #body{
+            height:1500px ;
+            width:90%;
+            margin: auto;
+            border:1px solid blue;
+        }
+        #body1{
+            height: 180px;
+            width: 100%;
+            border: 1px solid red;
+        }
+        #body1>p>span{
+            color: brown;
+            font-weight: bold;
+        }
+        #body1>p{
+            font-size: 17px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        #body1>h2{
+            margin-bottom: 20px;
+        }
+        #body1>div{
+            height: 60px;
+            width:100%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #body1>div>button{
+            width: 18%;
+            height: 100%;
+            background-color: white;
+
+        }
+        #body1>div>button:nth-child(1){
+            border: 1px solid rgb(202, 199, 199);
+            color: grey;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        #body1>div>button:nth-child(1)>span{
+                color: brown;
+                margin-right: 5px;
+        }
+        #body1>div>button:nth-child(2){
+            color: brown;
+            border:1px solid brown;
+            border-radius: 10px;
+
+        }
+        #body2{
+            /* height: 1000px; */
+            width : 100%;
+            border:1px solid green;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #body2>div{
+            height: 400px;
+            width:24%;
+            border:1px solid gray;
+            margin-bottom: 45px;
+
+
+        }
+        #body2>div:hover{
+            box-shadow: 8px 10px 18px gainsboro ;
+
+
+        }
+        /* #body2>div:hover>button{
+            color: brown;
+        } */
+
+
+        #body2>div>div:nth-child(1){
+            height: 250px;
+            width:100%;
+            /* border:5px solid red; */
+        }
+        #body2>div>div:nth-child(1)>img{
+            height: 100%;
+            width: 100%;
+            /* border:1px solid black; */
+        }
+        #body2>div>div:nth-child(2){
+            height:120px;
+            width: 100%;
+            border: 1px solid yellow;
+            padding: 10px;
+        }
+        #body2>div>div:nth-child(2)>h6{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        #body2>div>div:nth-child(2)>h5{
+            margin-top: 9px;
+            font-size: 16px;
+        }
+        #body2>div>div:nth-child(2)>p{
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        #body2>div>div:nth-child(2)>button{
+            height: 35px;
+            width:100%;
+            font-weight: bold;
+            border: 1px solid brown;
+            font-size: 14px;
+            background-color: white;
+            margin-top: 10px;
+        }
+        #body2>div>div:nth-child(2)>button:hover{
+            background-color: brown;
+            color: white;
+            border: none;
+        }
+
+
+
+
+
+
+
+
+
+        
+
+        </style>
+
+
+</head>
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div id="nb">
+                <div>             
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHIvMR55RXNIxhyJbtIomYn-IWTJng7WDhlQ&usqp=CAU"/>
+                  </div>
+            </div>
+            <div id="nb2">
+                <div>
+                    <input type="search" placeholder="Search for Gold Jewellery,Diamond Jewellery and more.."/>
+                </div>
+                <!-- <div></div> -->
+            </div>
+            <div id="nb3">
+                <div>
+                    <i class="fa-solid fa-store"></i>
+                    <P>STORES</P>
+                </div>
+                <div>
+                    <i class="fa-regular fa-user"></i>
+                    <P>ACCOUNT</P>
+                </div>
+                <div>
+                    <i class="fa-regular fa-heart"></i>
+                    <P>WISHLIST</P>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <P>CART</P>
+                </div>
+            </div>
+
+            
+
+        </div>
+        <div id="navbar2">
+            <div>
+                <P>ALL JEWELLRY</P>
+                <p>GOLD</p>
+                <p>DIAMOND</p>
+                <p>EARRINGS</p>
+                <p>RINGS</p>
+                <p>MIA</p>
+                <p>COLLECTION</p>
+                <p>RIVAAH</p>
+                <p>GOLDEN HARVEST</p>
+                <p>CORPORATE GIFTING</p>
+                <p>MORE</p>
+            </div>
+        </div>
+        <div id="navbar3">
+            <div>
+                <P>PRICE<span><i class="fa-solid fa-chevron-down"></i></span></P>
+                <P>JEWELLERY TYPE<span><i class="fa-solid fa-chevron-down"></i></span></P>
+                <P>PRODUCT<span><i class="fa-solid fa-chevron-down"></i></span></P>
+                <P>GENDER<span><i class="fa-solid fa-chevron-down"></i></span></P>
+                <P>BRAND<span><i class="fa-solid fa-chevron-down"></i></span></P>
+                <P>METAL COLOUR<span><i class="fa-solid fa-chevron-down"></i></span></P>
+                <P>SEE MORE FILTER<span><i class="fa-solid fa-chevron-down"></i></span></P>
+            </div>   
+
+                
+
+
+            
+
+        </div>
+
+        <div id="body">
+            <div id="body1">
+            <p>Home| <span>jumka Earrings</span></p>
+            <h2>jhumka-Earrings | 116 DESIGNS</h2>
+           <div>
+            <button><span><i class="fa-regular fa-circle-right"></i></span>COMPARE</button>
+            <button>SORT BY : BEST SELLERS<span><i class="fa-solid fa-chevron-down"></i></span></button>
+           </div>
+            </div>
+            <div id="body2">
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/514021JDEABAP1_1.jpg?impolicy=pqmed&imwidth=640"/>
+                    </div>
+                    <div>
+                        <h6>Radiant Traditional jhumkas</hh6>
+                        <h5>RS 78331</h5>
+                        <P>women | Earrings</P>
+                        <button>Explore Now</button>
+
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/511618JGRABA00.jpg?impolicy=pqmed&imwidth=640"/>
+                    </div>
+                    <div>
+                        <h6>Antique Drop Earrings</h6>
+                        <h5>RS 63353</h5>
+                        <P>women | Earrings</P>
+                        <button>Explore Now</button>
+
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/511618JGVABA00_1.jpg?impolicy=pqmed&imwidth=640"/>
+                    </div>
+                    <div>
+                        <h6>Traditional Floral Gold Jhumki Earr...</h6>
+                        <h5>RS 69126</h5>
+                        <P>women | Earrings</P>
+                        <button>Explore Now</button>
+
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/512216JHEABA00_1.jpg?impolicy=pqmed&imwidth=640"/>
+                    </div>
+                    <div>
+                        <h6>Beguiling 22 Karat Gold </h6>
+                        <h5>RS 43340</h5>
+                        <P>women | Earrings</P>
+                        <button>Explore Now</button>
+
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/511518JCZABA00_1.jpg?impolicy=pqmed&imwidth=640"/>
+                    </div>
+                    <div>
+                        <h6>Opulent Gold Jhumka Style Earrings </h6>
+                        <h5>RS 46340</h5>
+                        <P>women | Earrings</P>
+                        <button>Explore Now</button>
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>
