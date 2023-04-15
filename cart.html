@@ -13,7 +13,7 @@
             box-sizing: border-box;
         }
         #screen{
-            height: 3000px;
+            height: 1200px;
             width: 100%;
             border:4px solid orange;
         }
@@ -128,8 +128,8 @@
             height: 70px;
             width:87%;
             margin: auto;
-            border: 1px solid blueviolet;  
-             margin-top: 50px;
+            /* border: 1px solid blueviolet;   */
+             margin-top: 40px;
              margin-bottom: 15px;
 
 
@@ -140,45 +140,177 @@
             margin-bottom: 10px;
 
         }
+        #cart>h4>span{
+           margin-left: 10px;
+            border:2px solid brown;
+            border-radius: 5px;
+        }
+      
         #cart>p{
             margin-bottom: 25px;
             /* border-bottom: 1px solid black; */
         }
         #cart1{
             width: 87%;
-            height:550px;
+            /* height:550px; */
             border: 1px solid gray;
             justify-content: space-between;
             display: flex;
             margin: auto;
             /* margin-top: 15px; */
         }
-        #cart1>div{
+        #left{
+            width:65%;
+            /* height:500px; */
+            /* border:1px solid red; */
+        }
+        #left>div{
+            width:100%;
+            height:200px;
+            padding-top:20px;
+            /* border:1px solid green; */
+            display:flex;
+            border-top:1px solid grey;
+            justify-content: space-between;
+        }
+        #left>div>div:nth-child(1){
+            width:25%;
+            height:75%;
+            /* border:1px solid blue; */
+        }
+        #left>div>div:nth-child(1)>img{
             width:100%;
             height:100%;
-            border:2px solid blue;
-            margin-top: 5px;
-           
         }
-        #cart1>div>div:nth-child(1){
-            width:58%;
+        #left>div>div:nth-child(2){
+            width:70%;
             height:100%;
+            /* border:1px solid blue; */
+        }
+        #left>div>div:nth-child(2)>p:nth-child(1){
+            font-size: 22px;
+            font-weight: bold;
+            color:brown;
+            margin-bottom: 5px;
+        }
+        #left>div>div:nth-child(2)>p:nth-child(2){
+            font-size: 14px;
+            color:grey;
+            margin-bottom: 15px;
+        }
+        #left>div>div:nth-child(2)>p:nth-child(3){
+            font-size: 24px;
+            font-weight: bold;
+            
+            margin-bottom: 50px;
+        }
+        #left>div>div:nth-child(2)>p:nth-child(3)>span{
+            font-size: 18px;
+            font-weight: bold;
+            color:grey;
+        }
+        #left>div>div:nth-child(2)>p:nth-child(4){
+            color:brown;
+        }
+        #left>div>div:nth-child(2)>p:nth-child(4)>span{
+            color:brown;
+            margin-right: 10px;
+            font-size: 25px;
+        }
+        #right{
+            width:30%;
+            height:500px;
             border:1px solid red;
+            padding: 5px;
+        }
+        #right>div{
+            border-radius: 20px solid gray;
             display: flex;
+
         }
-        #cart1>div>div:nth-child(1)>div{
-            height: 150px;
-            width: 150px;
+        #right>div:nth-child(1){
+            margin-top: 10px;
+            width: 75%;
+            height: 45px;
+            border: 1px solid gray;
+            
         }
-        #cart1>div>div:nth-child(1)>div>img{
-            height: 100%;
+        #right>div>div>input{
+            display: flex;
+            width: 90%;
+            height: 45px;
+            border: 1px solid gray;
+        }
+        #right>div:nth-child(1)>input:nth-child(2){
             width: 100%;
+
         }
-        #cart1>div:nth-child(2){
-            width:38%;
-            height:100%;
-            border:1px solid rgb(0, 81, 255);
+
+
+
+
+
+
+
+        #footer{
+            /* height: 850px; */
+            width: 100%;
+            /* border: 5px solid red; */
+            background-color: rgb(242,233,233);
+            color: white;
+            margin-top: 55px;
+            
+           }
+           #footer>div{
+            width:90% ;
+            margin:auto;
+            /* border-bottom: 2px solid gray; */
+           }
+           #footer >div:nth-child(1){
+            width: 90%;
+            height:450px ;
+            border-bottom: 1px solid gray;
+            display: flex;
+            margin-bottom: 25px;
+            
+           }
+           #footer >div:nth-child(1)>div{
+            width: 35%;
+            height: 450px;
+            /* border: 4px solid gold; */
+            
+           }
+           #footer >div:nth-child(1)>div>h4{
+            margin-top: 55px;
+            /* margin-left: px; */
+            margin-bottom: 35px;
+            font-size: 20px;
+            color: brown;
+
+           }
+           #footer >div:nth-child(1)>div>p{
+            margin-top: 20px;
+            font-size: 20px;
+            color: black;
+           }
+           #footer >div:nth-child(1)>div:nth-child(4)>img{
+            margin-top: 45px;
+            height: 75px;
+           }
+       
+      @media screen and (max-width:1000px){
+        #cart1{
+            flex-direction: column-reverse;
         }
+        #left{
+            width:80%;
+            margin: auto;
+        }
+        #right{
+            width:80%;
+            margin: auto;
+        }
+      }
         </style>
 
 </head>
@@ -234,11 +366,11 @@
             </div>
         </div>
         <div id="cart">
-            <h4>Encircle Points :000</h4>
+            <h4>Encircle Points :<span>000</span></h4>
             <P>Redeem Encircle points & avail discount</P>
         </div>
         <div id="cart1">
-            <div>
+            <div id="left">
                 <div>
                     <div>
                         <img src="https://staticimg.titan.co.in/Tanishq/Catalog/511618JGRABA00.jpg"/>
@@ -246,15 +378,86 @@
                     <div>
                         <P>Antique Drop Earrings</P>
                         <P>511618JGRABA002EA007682</P>
-                        <P>Rs 62948<span>RS 64396</span></P>
+                        <P>Rs 62948 <span><del>RS 64396</del></span></P>
+                        <P><Span><i class="fa-thin fa-square"></i></Span>Add Gift Message</P>
                     </div>
 
                 </div>
+
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51D3B1JDHABA40_1.jpg"/>
+                    </div>
+                    <div>
+                        <P>Timeless Ruby And Emerald Jhumkas</P>
+                        <P>51D3B1JDHABA402BA000024</P>
+                        <P>Rs 76291 <span><del>RS 77458</del></span></P>
+                        <P><Span><i class="fa-thin fa-square"></i></Span>Add Gift Message</P>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div>
+                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/514021JDEABAP1_1.jpg"/>
+                    </div>
+                    <div>
+                        <P>Radiant Traditional Jhumkas</P>
+                        <P>51D3B1JDHABA402BA000024</P>
+                        <P>Rs 77834 <span><del>RS 75845</del></span></P>
+                        <P><Span><i class="fa-thin fa-square"></i></Span>Add Gift Message</P>
+                    </div>
+
+                </div>
+
+
+
             </div>
-            <div>
-                
+
+            <div id="right">
+                <div>
+                    <div><input type="in" placeholder="IN"/></div>
+                     <div><input type="Pincode" placeholder=" Pincode  Check"/></div>
+                </div>
+                <div></div>
+                <div></div>
+
             </div>
         </div>
+        <div id="footer">
+            <div>
+                <div>
+                    <h4>Useful Links</h4>
+                    <p>Delivery Information</p>
+                    <p>International Shipping</p>
+                    <p>Payment Options</p>
+                    <p>Track Your Order</p>
+                    <p>Returns</p>
+                    <p>Find a store</p>
+                    
+                </div>
+                <div>
+                    <h4>Information</h4>
+                    <p>Careers</p>
+                    <p>Blog</p>
+                    <P>Offers & Contest Details</P>
+                    <P>Help & FAQS</P>
+                    <P>About Tanishq</P>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>Write to Us</p>
+                    <p>Refunds & Cancellation </p>
+                    <p>Chat with Us</p>
+
+                </div>
+                <div>
+                    <img src="./apple store.webp"/>
+                    <img src="./googleplay.webp"/>
+                </div>
+            </div>
+            </div>
+
     </div>
 </body>
 </html>
