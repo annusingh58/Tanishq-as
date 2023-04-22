@@ -142,9 +142,17 @@
             <div>
                  <h4>Signup </h4>
             <div>
-                <div><input type="number" placeholder="Mobile Number..."/></div>
+                <!-- <div><input type="number" placeholder="Mobile Number..."/></div>
                 <div><input type="Email" placeholder="Email Id...."/></div>
-                 <div><input type="password" placeholder=" Type Password"/></div>
+                 <div><input type="password" placeholder=" Type Password"/></div> -->
+
+                 <form onsubmit="signup(event)">
+                    <input id="number" type="digit" placeholder="Number"/></br>
+                     <input id="email" type="email" placeholder="Enter Email Id"/></br>
+                     <input id="password" type="password"placeholder="Enter Password"/></br>
+                     <input type="submit" value="Signup"/>
+                  </form>
+                 
             </div>
 
             <div>
@@ -154,7 +162,7 @@
 
 
                  <P>By continuing, I agree to <span><u>Terms of Use & Privacy Policy</u></span></P>
-                <div><button>Signup</button></div>
+                
                 
            
                 </div>
@@ -165,6 +173,6 @@
         </div>
 
     </div>
-    
+    <script src="./server.js"></script>
 </body>
 </html>
