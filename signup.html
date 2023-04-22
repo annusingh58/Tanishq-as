@@ -142,16 +142,15 @@
             <div>
                  <h4>Signup </h4>
             <div>
-                <!-- <div><input type="number" placeholder="Mobile Number..."/></div>
-                <div><input type="Email" placeholder="Email Id...."/></div>
-                 <div><input type="password" placeholder=" Type Password"/></div> -->
+                
+                <form onsubmit="signup(event)">
 
-                 <form onsubmit="signup(event)">
-                    <input id="number" type="digit" placeholder="Number"/></br>
-                     <input id="email" type="email" placeholder="Enter Email Id"/></br>
-                     <input id="password" type="password"placeholder="Enter Password"/></br>
-                     <input type="submit" value="Signup"/>
-                  </form>
+                    <div><input id="name" type="text" placeholder="Name"/></br></div>
+                    <div><input id="email" type="email" placeholder="Enter Email Id"/></br></div>
+                    <div><input id="password" type="password" placeholder="password"/></br></div>
+                    <div><input id="confimpassword" type="password" placeholder="confimpassword"/></br></div>
+                    <div><input type="submit" value="Signup"/></div>
+                   </form>
                  
             </div>
 
