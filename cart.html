@@ -221,31 +221,144 @@
             width:30%;
             height:500px;
             border:1px solid red;
-            padding: 5px;
+            padding: 2px;
         }
         #right>div{
             border-radius: 20px solid gray;
             display: flex;
 
         }
-        #right>div:nth-child(1){
-            margin-top: 10px;
-            width: 75%;
-            height: 45px;
-            border: 1px solid gray;
-            
-        }
-        #right>div>div>input{
+       
+        #right1{
             display: flex;
-            width: 90%;
-            height: 45px;
-            border: 1px solid gray;
+            height:60px;
+            width:100%;
+            border:1px solid red;
+            align-items: end;
+            justify-content: space-between;
+            margin-top: 80px;
         }
-        #right>div:nth-child(1)>input:nth-child(2){
-            width: 100%;
+        #right1>div:nth-child(1){
+            width:30%;
+            height:100%;
+        }
+          #right1>div:nth-child(1)>fieldset{
+            display: flex;
+            height: 100%;
+            border-radius: 5px;
+            padding: 10px;
+            justify-content: space-between;
+            border:1px solid grey;
+        }
+        #right1>div:nth-child(2){
+            width:65%;
+            height: 88%;
+            border:1px solid grey;
+            border-radius: 2px;
+            display: flex;
+            justify-content: space-between;
 
         }
-
+        #right1>div:nth-child(2)>p:nth-child(1){
+            color:grey;
+        }
+        #right1>div:nth-child(2)>p:nth-child(2){
+            color:gray;
+        }
+      
+        #right>div:nth-child(2){
+            height:500px;
+            width:100%;
+            border:5px solid red;
+            margin-top: 30px;
+            background-color: #f6f6f6;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        #right>div:nth-child(2)>div:nth-child(1){
+            height:30px;
+            width:100%;
+            border:1px solid green;
+            display: flex;
+        }
+        #right>div:nth-child(2)>div:nth-child(1)>div{
+            height:100%;
+            width:50%;
+        }
+      
+         #right>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
+            font-size: 18px;
+            border-bottom: 2px solid brown;
+            color:brown; 
+        }
+        #right>div:nth-child(2)>div:nth-child(1)>div:nth-child(2){
+            font-size: 18px;
+            border-bottom: 2px solid rgb(175, 171, 171);
+            color:rgb(109, 107, 107);
+        }
+        #right>div:nth-child(2)>div:nth-child(2){
+            height:50px;
+            width:100%;
+            border:1px solid red;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        #right>div:nth-child(2)>div:nth-child(2)>input{
+            height:100%;
+            width:65%;
+            padding-left: 20px;
+            background-color: #f6f6f6;
+            border-radius: 5px;
+            border:1px solid grey;
+        }
+        #right>div:nth-child(2)>div:nth-child(2)>button{
+            height:100%;
+            width:30%;
+            background-color: #832729;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+        }
+        #right>div:nth-child(2)>p{
+            font-weight: bold;
+            font-size: 20px;
+            color:#832729;
+            margin-top: 20px;
+        }
+        #right>div:nth-child(2)>div:nth-child(4){
+            height:130px;
+            width:100%;
+            /* border:1px solid red; */
+            display: flex;
+            margin-top: 10px;
+        }
+        #right>div:nth-child(2)>div:nth-child(4)>div{
+            width:50%;
+            height:100%;
+            /* border:1px solid green; */
+        }
+        #right>div:nth-child(2)>div:nth-child(4)>div>p{
+            color:rgb(77, 76, 76);
+            margin-bottom: 8px;
+        }
+        #right>div:nth-child(2)>div:nth-child(4)>div:nth-child(2)>p{
+          text-align: right;
+        }
+        #right>div:nth-child(2)>div:nth-child(4)>div:nth-child(2)>h1{
+          text-align: right;
+        }
+        #right>div:nth-child(2)>div:nth-child(4)>div>h1{
+            color:rgb(77, 76, 76);
+            margin-bottom: 8px;
+            font-size: 18px;
+            color:#832729;
+            margin-top: 15px;
+        }
+        #right>div:nth-child(2)>div:nth-child(4)>div>h1>span{
+            font-size: 12px;
+        }
 
 
 
@@ -326,7 +439,7 @@
                 <div>
                     <input type="search" placeholder="Search for Gold Jewellery,Diamond Jewellery and more.."/>
                 </div>
-                <!-- <div></div> -->
+                
             </div>
             <div id="nb3">
                 <div>
@@ -414,15 +527,48 @@
 
             </div>
 
+            
             <div id="right">
-                <div>
-                    <div><input type="in" placeholder="IN"/></div>
-                     <div><input type="Pincode" placeholder=" Pincode  Check"/></div>
+                <div id="right1">
+                    <div>
+                        <fieldset>
+                            <legend>Country</legend>
+                            <p>IN</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <p>Pincode</p>
+                        <p>Check</p>
+                    </div>
                 </div>
-                <div></div>
-                <div></div>
-
+                <div>
+                    <div>
+                        <div><p>Enter Code</p></div>
+                        <div><p>View Promo Codes</p></div>
+                    </div>
+                    <div>
+                        <input type="number" placeholder="Enter Coupon Code"/>
+                        <button>Apply</button>
+                    </div>
+                    <p>ORDER SUMMARY</p>
+                    <div>
+                        <div>
+                            <p>Sub Total</p>
+                            <p>Discount</p>
+                            <p>Delivery Charge</p>
+                            <h1>TOTAL<span>Incl of all taxes</span></h1>
+                        </div>
+                        <div>
+                            <p>Rs.193055</p>
+                        <p>Rs.0</p>
+                        <p>FREE</p>
+                        <h1>Rs80999</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
         <div id="footer">
             <div>
