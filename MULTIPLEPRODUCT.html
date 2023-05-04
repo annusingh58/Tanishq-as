@@ -327,6 +327,14 @@
             margin-top: 45px;
             height: 75px;
            }
+           #product{
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+           }
+           #singlrPro{
+            width: 23%;
+           }
 
 
        
@@ -431,7 +439,11 @@
             <button>SORT BY : BEST SELLERS<span><i class="fa-solid fa-chevron-down"></i></span></button>
            </div>
             </div>
-            <div id="body2">
+
+            <div id="products">
+
+            </div>
+            <!-- <div id="body2">
                 <div>
                     <div>
                         <img src="https://staticimg.titan.co.in/Tanishq/Catalog/514021JDEABAP1_1.jpg?impolicy=pqmed&imwidth=640"/>
@@ -698,7 +710,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
             
         </div>
         
@@ -739,4 +751,20 @@
     </div>
     
 </body>
+<script>
+    window.onload=function(){
+        // alert("work on");
+        var divtoshowproduct=document.getElementById("products");
+        var finalData="";
+        var productFromLS=JSON.parse(localStorage.getItem("product"));
+        for(i=0;i<productFromLS.length;i++){
+            finalData+=`<div id="singlePro">
+                <img src=${productFromLS[i].proimage}/>
+                <h1>${productFromLS[i].proname}</h1>
+                <h2>${productFromLS[i].proprice}</h2>`
+        }
+        console.log(finalData,"finalData here");
+        divtoshowproduct.innerHTML=finalData;
+    }
+</script>
 </html>
