@@ -768,15 +768,24 @@
         var finalData="";
         var productFromLS=JSON.parse(localStorage.getItem("product"));
         for(i=0;i<productFromLS.length;i++){
-            finalData+=`<div id="singlePro">
+            finalData+=`<div onclick='redirect(${JSON.stringify(productFromLS[i])})' id="singlePro" >
                 <img src=${productFromLS[i].proimage}/>
                 <h3>${productFromLS[i].proname}</h3>
                 <p>${productFromLS[i].proprice}</p>
-                </div>`
+                </div>`;
 
         }
         console.log(finalData,"finalData here");
         divtoshowproduct.innerHTML=finalData;
     }
+    function redirect(product) {
+            var singleProduct = JSON.stringify(product);
+            console.log(singleProduct, " s here")
+            // alert("Working")
+            localStorage.setItem("current-product", singleProduct);
+            window.location.href = './SingleProduct.html'
+        }
+
+
 </script>
 </html>
