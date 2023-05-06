@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>classcart</title>
 </head>
 <body>
     <h1>Your cart</h1>
@@ -12,18 +12,19 @@
 
     <script>
         window.onload = function(){
-            var currentUser= JSON.parse(localStorage.getItem("TanishqCurrentUser"))
-            var userdata = JSON.parse(localStorage.getItem("Tanishq-Users"))
+            var currentUser= JSON.parse(localStorage.getItem("tlogin"))
+            var userdata = JSON.parse(localStorage.getItem("tuser"))
             var divToAppendProducts = document.getElementById("products")
             var products;
             for(var i=0; i<userdata.length; i++){
-                if(currentUser.userEmail== userdata[i].userEmail){
+                if(currentUser.uemail== userdata[i].uemail){
                     products= userdata[i].cartProducts
                 }
             }
             var finalData=""
             for(var i=0; i<products.length; i++){
-                finalData+= `<div><img src='${products[i].proImage}'/> <br/> <h2>${products[i].proName}</h2><br/><h3>${products[i].proPrice}</h3></div>`
+                finalData+= `<div> <img src='${products[i].proimage}'/> <br/> <h2>${products[i].proname}</h2>
+                    <br/><h3>${products[i].proprice}</h3></div>`
             }
            divToAppendProducts.innerHTML=finalData;
         }

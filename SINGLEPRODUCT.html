@@ -540,23 +540,25 @@
         var product = JSON.parse(localStorage.getItem("current-product"));
 
         var divToAppendProduct = document.getElementById("left");
-        var structure = `<div> <img src='${product.proimage}' /></div><div> <img src='${product.proimage}' /> <br/> <h1>${product.proname}</h1><br/> <p>${product.proprice}</p><br/> <button onclick='addCart()'>Add to cart</button> </div>`;
+        var structure = `<div> <img src='${product.proimage}' /></div><div> <img src='${product.proimage}' /> 
+            <br/> <h1>${product.proname}</h1><br/> <p>${product.proprice}</p><br/>
+             <button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button> </div>`;
         console.log(structure, "here");
         divToAppendProduct.innerHTML = structure;
     }
-    function addCart(){
+    function addCart(product){
         alert("Adding to cart");
         var currentUser = JSON.parse(localStorage.getItem("tlogin"))
 
           // console.log(currentUser.uemail);
           var userdata = JSON.parse(localStorage.getItem("tuser"));
-            for (var i = 0; i < userdata.length; i++) {
+            for (var i = 0; i<userdata.length; i++) {
                 if (currentUser.uemail == userdata[i].uemail) {
-                    alert("got")
+                    alert("mil gya");
                     if (userdata[i].cartProducts === undefined) {
                         // userdata[i].cartProducts = "hello"
 
-                        userdata[i].cartProducts = [product]
+                        userdata[i].cartProducts = [product];
                     } else {
                         userdata[i].cartProducts.push(product);
                     }
@@ -564,7 +566,7 @@
                     window.location.href = "./classcart.html"
                 }
             }
-            localStorage.setItem("Tanishq-Users", JSON.stringify(userdata))
+            localStorage.setItem("tuser", JSON.stringify(userdata))
     }
 
 </script>
