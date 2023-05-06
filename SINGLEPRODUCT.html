@@ -536,6 +536,7 @@
         </style>
 <script>
     window.onload = function () {
+        // alert("working")
         var product = JSON.parse(localStorage.getItem("current-product"));
 
         var divToAppendProduct = document.getElementById("left");
@@ -544,8 +545,28 @@
         divToAppendProduct.innerHTML = structure;
     }
     function addCart(){
-        alert("Adding to cart")
+        alert("Adding to cart");
+        var currentUser = JSON.parse(localStorage.getItem("tlogin"))
+
+          // console.log(currentUser.uemail);
+          var userdata = JSON.parse(localStorage.getItem("tuser"));
+            for (var i = 0; i < userdata.length; i++) {
+                if (currentUser.uemail == userdata[i].uemail) {
+                    alert("got")
+                    if (userdata[i].cartProducts === undefined) {
+                        // userdata[i].cartProducts = "hello"
+
+                        userdata[i].cartProducts = [product]
+                    } else {
+                        userdata[i].cartProducts.push(product);
+                    }
+                    alert("Product added to cart")
+                    window.location.href = "./classcart.html"
+                }
+            }
+            localStorage.setItem("Tanishq-Users", JSON.stringify(userdata))
     }
+
 </script>
 
 </head>
