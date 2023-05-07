@@ -1443,7 +1443,7 @@
 <script>
     window.onload=()=>{
         // alert("working");
-        var user=JSON.parse(localStorage.getItem("tlogin"));
+        var user=JSON.parse(localStorage.getItem("tanishqlogin"));
         var div=document.getElementById("switch");
         var divforlogout=document.getElementById("logout")
         var name=`<h1>${user.uname}</h1>`;
@@ -1455,7 +1455,7 @@
 
     function logout(){
         alert("Logout Success")
-        localStorage.removeItem("tlogin");
+        localStorage.removeItem("tanishqlogin");
         window.location.reload();
     }
 

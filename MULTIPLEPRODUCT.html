@@ -766,7 +766,7 @@
         // alert("work on");
         var divtoshowproduct=document.getElementById("productsT");
         var finalData="";
-        var productFromLS=JSON.parse(localStorage.getItem("product"));
+        var productFromLS=JSON.parse(localStorage.getItem("tanishqProducts"));
         for(i=0;i<productFromLS.length;i++){
             finalData+=`<div onclick='redirect(${JSON.stringify(productFromLS[i])})' id="singlePro" >
                 <img src=${productFromLS[i].proimage}/>
@@ -782,7 +782,7 @@
             var singleProduct = JSON.stringify(product);
             console.log(singleProduct, " s here")
             // alert("Working")
-            localStorage.setItem("current-product", singleProduct);
+            localStorage.setItem("tanishqCurrentProduct", singleProduct);
             window.location.href = './SingleProduct.html'
         }
 

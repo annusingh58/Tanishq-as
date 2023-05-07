@@ -537,7 +537,7 @@
 <script>
     window.onload = function () {
         // alert("working")
-        var product = JSON.parse(localStorage.getItem("current-product"));
+        var product = JSON.parse(localStorage.getItem("tanishqCurrentProduct"));
 
         var divToAppendProduct = document.getElementById("left");
         var structure = `<div> <img src='${product.proimage}' /></div><div> <img src='${product.proimage}' /> 
@@ -548,10 +548,10 @@
     }
     function addCart(product){
         alert("Adding to cart");
-        var currentUser = JSON.parse(localStorage.getItem("tlogin"))
+        var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
 
           // console.log(currentUser.uemail);
-          var userdata = JSON.parse(localStorage.getItem("tuser"));
+          var userdata = JSON.parse(localStorage.getItem("tanishqUserData"));
             for (var i = 0; i<userdata.length; i++) {
                 if (currentUser.uemail == userdata[i].uemail) {
                     alert("mil gya");
@@ -563,10 +563,10 @@
                         userdata[i].cartProducts.push(product);
                     }
                     alert("Product added to cart")
-                    window.location.href = "./classcart.html"
+                    window.location.href = "./cart.html"
                 }
             }
-            localStorage.setItem("tuser", JSON.stringify(userdata))
+            localStorage.setItem("tanishqUserData", JSON.stringify(userdata))
     }
 
 </script>

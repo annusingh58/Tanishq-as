@@ -7,19 +7,19 @@
     <title>Addproduct</title>
 </head>
 <body>
-    <form onsubmit="addproduct(event)">
-        <label>Product Name</label><br/>
+    <form onsubmit="tanishqproductlist(event)">
+        <label>tanishq Product Name</label><br/>
         <input id="pname" type="text" /></br>
-        <label>Product Price</label><br/>
+        <label>tanishq Product Price</label><br/>
         <input id="pprice" type="number" /></br>
-        <label>Product Image url</label><br/>
+        <label>tanishq Product Image url</label><br/>
         <input id="pimage" type="text" /></br>
         <input type="submit"/> </br>
     </form>
     <script>
-        function addproduct(event){
+        function tanishqproductlist(event){
             event.preventDefault();
-            // alert("Adding product");
+            // alert(" Tanshiq Adding product");
 
 
             var proname=document.getElementById("pname").value;
@@ -27,13 +27,13 @@
             var proimage=document.getElementById("pimage").value;
 
 
-            var product={proname,proprice,proimage};
+            var tanishqproduct={proname,proprice,proimage};
 
-            var LS=JSON.parse(localStorage.getItem("product")) ||[];
-            LS.push(product);
-            localStorage.setItem("product",JSON.stringify(LS));
+            var LS=JSON.parse(localStorage.getItem("tanishqProducts")) ||[];
+            LS.push(tanishqproduct);
+            localStorage.setItem("tanishqProducts",JSON.stringify(LS));
 
-            alert("product Added Sucessfully");
+            alert("tanishq product Added Sucessfully");
 
 
 

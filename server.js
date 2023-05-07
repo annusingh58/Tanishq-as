@@ -1,5 +1,5 @@
 function signup(event){
-   event.preventDefault ( )
+   event.preventDefault();
    alert("working");
 
 
@@ -13,7 +13,7 @@ function signup(event){
         if(password==confimpassword){
 
            
-                var tanishq= JSON.parse(localStorage.getItem("tuser")) || []   
+                var tanishq= JSON.parse(localStorage.getItem("tanishqUserData")) || []   
                 var flag=false;
                 for(i=0;i<tanishq.length;i++){
                     if(tanishq[i].uemail==email){
@@ -25,7 +25,7 @@ function signup(event){
                 var tdata ={uname :name,uemail:email,upassword:password,uconfimpassword:confimpassword}
                 tanishq.push(tdata);
                 console.log(tanishq);
-                localStorage.setItem("tuser",JSON.stringify(tanishq))
+                localStorage.setItem("tanishqUserData",JSON.stringify(tanishq))
                 window.location.href="./login.html"
 
                 }
@@ -66,7 +66,7 @@ function login(event){
 
     var loginuser={};
     if(lemail && lpassword){
-        var tanishql=JSON.parse(localStorage.getItem("tuser"))
+        var tanishql=JSON.parse(localStorage.getItem("tanishqUserData"))
         var flag =false;
         for(var i=0;i<tanishql.length;i++){
             if(tanishql[i].uemail==lemail){
@@ -77,7 +77,7 @@ function login(event){
            
         }
              if( flag==true){
-                localStorage.setItem("tlogin",JSON.stringify(loginuser))
+                localStorage.setItem("tanishqCurrentUser",JSON.stringify(loginuser))
                 alert("login successfull")
                 window.location.href="./homepage.html"
                 
