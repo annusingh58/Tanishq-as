@@ -87,13 +87,13 @@ function login(event){
 
 
         else{
-            alert("caredential are match")
+            alert("caredential are match");
         }
 
 
     }
     else{
-        alert("all field are required")
+        alert("all field are required");
     }
 
 }
